@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="app">
+    <head></head>
+    <body>
+        <div ng-controller="myCtrl1">
+            <h5>myCtrl1</h5>
+            <div>First Name :{{person.firstName}}</div>
+            <div>Last Name: {{person.lastName}}</div>
+            <div>
+                <img ng-src="{{person.img}}" title="{{person.firstName}} {{person.lastName}}" height="300" width="300">
+            </div>
+        </div>
+            
+        <div ng-controller="myCtrl1http">
+            <h5>myCtrl1http</h5>
+            <div>{{err}}</div>
+            <div>Name:{{user.name}}</div>
+            <div>Location:{{user.location}}</div>
+            <div>
+                <img ng-src="{{user.avatar_url}}" title="{{user.name}}">
+            </div>
+        
+        </div>
+        
+
+        <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+        <script type="text/javascript" src="/app.js"></script>
+        <script type="text/javascript" src="/scripts/controllers/myCtrl1.js"></script>
+        <script type="text/javascript" src="/scripts/controllers/myCtrl1http.js"></script>
+    </body>
+</html>

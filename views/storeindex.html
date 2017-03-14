@@ -1,0 +1,13 @@
+<html>
+    <body ng-app="app" ng-controller="storeController as store">
+        <div ng-repeat="product in store.products" ng-show="!product.soldOut">
+          <h2>{{product.name}}</h2><!--{{store.products[0].name}}-->
+            <h5>{{product.price|currency}}</h5>
+            <p>{{product.description}}</p>
+            <button ng-show="product.canPurchase">Add to Cart</button>
+        </div>
+        <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+        <script type="text/javascript" src="/app.js"></script>
+        <script type="text/javascript" src="/scripts/controllers/storeController.js"></script>
+    </body>
+</html>
